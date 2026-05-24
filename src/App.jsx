@@ -1,4 +1,7 @@
 import {BrowserRouter , Routes , Route , Link} from 'react-router';
+import ListUser from "./components/ListUser.jsx";
+import CreateUser from "./components/CreateUser.jsx";
+import EditUser from "./components/EditUser.jsx";
 
 function App() {
 
@@ -6,7 +9,7 @@ function App() {
     <>
       <div
         className={
-          " h-screen text-black bg-linear-to-r from-black via-white to-black"
+          " h-screen text-black bg-linear-to-r from-black via-yellow-100 to-black"
         }
       >
         <h5 className={"text-xl font-semibold text-center"}>
@@ -16,9 +19,7 @@ function App() {
         <BrowserRouter>
           <nav className={"flex justify-center mt-5"}>
             <ul className={"flex justify-around w-96"}>
-              <li
-                className={"p-2 rounded-3xl bg-gray-400  w-24.25 text-center"}
-              >
+              <li className={"p-2 rounded-3xl bg-white  w-24.25 text-center"}>
                 <Link to={"/"}>List User</Link>
               </li>
 
@@ -27,8 +28,15 @@ function App() {
               </li>
             </ul>
           </nav>
-        </BrowserRouter>
 
+          <div className={"flex justify-center mt-12.5"}>
+            <Routes>
+              <Route index element={<ListUser />}></Route>
+              <Route path={"user/create"} element={<CreateUser />}></Route>
+              <Route path={"user/:id/edit"} element={<EditUser />}></Route>
+            </Routes>
+          </div>
+        </BrowserRouter>
       </div>
     </>
   );
