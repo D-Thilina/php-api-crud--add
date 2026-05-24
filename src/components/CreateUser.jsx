@@ -1,22 +1,19 @@
 import React, { useState } from "react";
 
 const CreateUser = () => {
-
   const [inputs, setInputs] = useState({});
 
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    console.log(event.target.name , event.target.value)
-    console.log(event)
-    setInputs(values => ({...values, [name]:value}));
-  }
+    setInputs(values => ({ ...values, [name]: value }));
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    console.log(inputs)
-  }
+    console.log(inputs);
+  };
 
   return (
     <>
