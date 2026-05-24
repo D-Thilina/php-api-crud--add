@@ -9,7 +9,7 @@ function App() {
     <>
       <div
         className={
-          " h-screen text-black bg-linear-to-r from-black via-yellow-100 to-black"
+          " h-screen text-black bg-linear-to-r from-black via-red-400 to-black"
         }
       >
         <h5 className={"text-xl font-semibold text-center"}>
@@ -19,11 +19,11 @@ function App() {
         <BrowserRouter>
           <nav className={"flex justify-center mt-5"}>
             <ul className={"flex justify-around w-96"}>
-              <li className={"p-2 rounded-3xl bg-white  w-24.25 text-center"}>
+              <li className={"p-2 rounded-3xl bg-white/50 w-24.25 text-center"}>
                 <Link to={"/"}>List User</Link>
               </li>
 
-              <li className={"p-2 rounded-3xl bg-gray-400"}>
+              <li className={"p-2 rounded-3xl bg-white/50"}>
                 <Link to={"user/create"}>Create User</Link>
               </li>
             </ul>
